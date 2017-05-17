@@ -1,0 +1,43 @@
+.seo-pin {
+width: 50px;
+height: 200px;
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+z-index: 10000;
+background-size: 50%;
+background-position: 10px 10px;
+}
+.seo-pin img {
+display: none;
+}
+.seo-pin ul {
+width: 260px;
+margin:0;
+padding: 20px;
+position: absolute;
+top: -10000%;
+left:0;
+background: rgba(0, 0, 0, 0.8);
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+}
+.seo-pin:hover ul {
+top: 0px;
+}
+.seo-pin ul li {
+padding: 10px;
+list-style-type: none;
+}
+.seo-pin ul li a {
+color: #fff !important;
+text-decoration: none;
+}
+.seo-pin ul li:hover {
+padding-bottom:9px;
+border-bottom: 1px solid #f1f1f1;
+}

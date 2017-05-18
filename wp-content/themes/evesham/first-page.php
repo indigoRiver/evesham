@@ -89,14 +89,14 @@ Template Name: Home 2
       <div id="newsticker" class="latestProjects" style="overflow: hidden; position: relative; height: 408px;">
         <ul style="position: absolute; margin: 0px; padding: 0px; top: 0px;">
           <li style="margin: 0px; padding: 0px; height: 136px;">
-            <h2><a href="<?php echo BASE_DIR; ?>crick-boat-show.php" style="color: #009fe3;">Crick Boat Show</a></h2>
+            <h2><a href="<?php echo get_bloginfo('url'); ?>/crick-boat-show/" style="color: #009fe3;">Crick Boat Show</a></h2>
             <h3>09 June 2016</h3>
-            <p><a href="<?php echo BASE_DIR; ?>crick-boat-show.php" style="color: #777;">Our Webasto team will be exhibiting again at the Crick Boat Show (stand BMR7). For information and advice on Webasto heating and the new Whisper...</a></p><br>
+            <p><a href="<?php echo get_bloginfo('url'); ?>/crick-boat-show/" style="color: #777;">Our Webasto team will be exhibiting again at the Crick Boat Show (stand BMR7). For information and advice on Webasto heating and the new Whisper...</a></p><br>
           </li>
           <li style="margin: 0px; padding: 0px; height: 136px;">
-            <h2><a href="<?php echo BASE_DIR; ?>boat-count-figures.php" style="color: #009fe3;">Boat Count Figures</a></h2>
+            <h2><a href="<?php echo get_bloginfo('url'); ?>/boat-count-figures/" style="color: #009fe3;">Boat Count Figures</a></h2>
             <h3>09 June 2016</h3>
-            <p><a href="<?php echo BASE_DIR; ?>boat-count-figures.php" style="color: #777;">The Canal and River Trust’s annual national boat count shows that licence evasion on its waterways has reduced by 0.2% in the past year to 4.4%...</a></p><br>
+            <p><a href="<?php echo get_bloginfo('url'); ?>/boat-count-figures/" style="color: #777;">The Canal and River Trust’s annual national boat count shows that licence evasion on its waterways has reduced by 0.2% in the past year to 4.4%...</a></p><br>
           </li>
           <li style="margin: 0px; padding: 0px; height: 136px;">
             <h2>Recent News #3</h2>
@@ -148,30 +148,25 @@ $(function(){
                 <div id="menu_box">
                   <h4>Featured Boats</h4>
                   <div class="pad">
+                    <?php
+      							$args = array(
+      								'post_type' => 'brokerage'
+      							);
+      							$brokerage = get_posts($args);
+                    foreach ($brokerage as $posts) {
+                      $postID = $posts->ID;
+      							?>
                     <div>
-                      <img align="right" src="images/thumbs/eveshammarina.co.uk_--_906169570.jpg" width="50"><b><a href="http://www.eveshammarina.co.uk/prods/74587/armadillo---sold.html">Armadillo - Sold</a></b><br>
-                      ‘Armadillo’ is a traditional stern narrowboat with a traditional interior. Recently repainted she...<br>
-                      <a class="btn4" href="http://www.eveshammarina.co.uk/prods/74587/armadillo---sold.html" style="text-decoration:none; padding:5px;">more</a><br>
+                      <?php echo get_the_post_thumbnail($postID); ?><b><a href="<?php echo get_the_permalink($postID); ?>"><?php echo get_field('boat_name', $postID); ?></a></b><br>
+                      <?php
+                      $body = get_field('broker_summary', $postID);
+                      echo substr($body, 0, strpos($body, ' ', 90)).'...'; ?><br>
+                      <a class="btn4" href="<?php echo get_field('boat_name', $postID); ?>" style="text-decoration:none; padding:5px;">more</a><br>
                       <br>
                     </div>
-                    <div>
-                      <img align="right" src="images/thumbs/eveshammarina.co.uk_--_278462368.jpg" width="50"><b><a href="http://www.eveshammarina.co.uk/prods/100619/shirley-anne-ii.html">Shirley Anne II</a></b><br>
-                      Shirley Anne is a 60ft cruiser stern narrowboat fitted out to be a modern, light and airy boat....<br>
-                      <a class="btn4" href="http://www.eveshammarina.co.uk/prods/100619/shirley-anne-ii.html" style="text-decoration:none; padding:5px;">more</a><br>
-                      <br>
-                    </div>
-                    <div>
-                      <img align="right" src="images/thumbs/eveshammarina.co.uk_--_950375784.jpg" width="50"><b><a href="http://www.eveshammarina.co.uk/prods/74589/1-bed-wide-beam-sailaway.html">1 Bed Wide Beam Sailaway</a></b><br>
-                      60ft x12ft ready to sailaway (1 bedroom). Battened, sprayfoam insulation, ballasted...<br>
-                      <a class="btn4" href="http://www.eveshammarina.co.uk/prods/74589/1-bed-wide-beam-sailaway.html" style="text-decoration:none; padding:5px;">more</a><br>
-                      <br>
-                    </div>
-                    <div>
-                      <img align="right" src="images/thumbs/eveshammarina.co.uk_--_277749824.jpg" width="50"><b><a href="http://www.eveshammarina.co.uk/prods/51102/sailaway-60ftx12ft---sold.html">Sailaway 60ftx12ft - Sold</a></b><br>
-                      60ft x12ft ready to sailaway (2 bedroom). Battened, sprayfoam insulation, ballasted, plywood...<br>
-                      <a class="btn4" href="http://www.eveshammarina.co.uk/prods/51102/sailaway-60ftx12ft---sold.html" style="text-decoration:none; padding:5px;">more</a><br>
-                      <br>
-                    </div>
+                    <?php
+                    }
+                    ?>
                   </div>
                 </div>
               </menu>

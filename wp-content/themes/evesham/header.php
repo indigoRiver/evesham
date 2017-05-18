@@ -1,5 +1,4 @@
-<?php
-define("BASE_DIR", "/~marina/");
+<?
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -68,6 +67,46 @@ error_reporting(E_ALL);
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<style id="rs-plugin-settings-inline-css" type="text/css">
 	   .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+	</style>
+	<style>
+
+	#two-column{
+		width: 550px;
+	}
+	#two-column #left{
+		width: 300px;
+		float: left;
+	}
+	#two-column #right{
+		width: 250px;
+		float: right;
+	}
+	#two-column p{
+		margin-bottom: 12px;
+	}
+	#two-column input[type="select"]{
+ 		width: 100%;
+	}
+	#two-column #right input[type="text"], #two-column #left input[type="text"], #two-column #left input[type="email"]{
+		width:240px;
+	}
+	#two-column textarea {
+
+	}
+	#two-column input[type="submit"]{
+
+	}
+	#two-column input[type="text"]:focus, #two-column textarea:focus{
+		background: #eee;
+	}
+	#two-column input[type="submit"]:hover{
+		background:#fff;
+		color:#222;
+		border: 1px solid #222;
+	}
+	.wpcf7-response-output {
+		display: none;
+	}
 	</style>
 	<link href="<?php echo bloginfo('template_url'); ?>/includes/css/external.css" id="wpcharming-style-css" media="all" rel="stylesheet" type="text/css">
 	<!--<link href="http://cms.pm/uploads/86.seesites.biz_--_483317998.css" id="wpcharming-style-css" media="all" rel="stylesheet" type="text/css">-->
@@ -200,7 +239,7 @@ error_reporting(E_ALL);
 		<nav id="navigation">
 			<ul id="nav">
 				<li class="firstel">
-					<a href="<?php echo BASE_DIR; ?>" title="Evesham Marina Home">Home</a>
+					<a href="<?php echo bloginfo('url'); ?>" title="Evesham Marina Home">Home</a>
 				</li>
 			</ul>
 		</nav>
@@ -213,7 +252,7 @@ error_reporting(E_ALL);
 							<div class="container">
 								<div class="header-left">
 									<div class="site-branding">
-										<a href="<?php echo BASE_DIR; ?>" rel="home" title="Evesham Marina"><img alt="Evesham Marina Logo" src="<?php echo bloginfo('template_url');?>/img/evesham-marina.png"></a>
+										<a href="<?php echo bloginfo('url'); ?>" rel="home" title="Evesham Marina"><img alt="Evesham Marina Logo" src="<?php echo bloginfo('template_url');?>/img/evesham-marina.png"></a>
 									</div>
 								</div>
 								<div class="header-right">
@@ -225,7 +264,7 @@ error_reporting(E_ALL);
 														<div class="contact-box">
 															<div class="box-text left">
 																<div class="contact-text">
-																	Worcestershire&#39;s premier marina for all your boating needs.<span class="spacer"></span>
+																	<img class="header-img" src="<?php echo bloginfo('template_url'); ?>/uploads/IR4244_Evesham_Marina_website header for open weekend_C2A.JPG" /><span class="spacer"></span>
 																</div>
 															</div>
 														</div>
@@ -368,16 +407,20 @@ error_reporting(E_ALL);
 																			<?php
 																			//$path = pathinfo(__FILE__)['filename'];
 																			//$base = pathinfo(__FILE__)['dirname'];
-																			$file = ($_SERVER['PHP_SELF']);
-																			$withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $file);
-																			$path = str_replace("/websites/eveshamMarina/", "", $withoutExt);
-																			define('IMAGEPATH', 'C:/xampp/htdocs/Websites/eveshamMarina/wp-content/themes/evesham/slider/'.$path.'/');
-                                      chdir(IMAGEPATH);
+																			$gallery = get_field('slider', get_the_ID());
+																			//$file = ($_SERVER['PHP_SELF']);
+																			//$withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $file);
+																			//$path = str_replace("/websites/eveshamMarina/", "", $withoutExt);
+																			//define('IMAGEPATH', get_bloginfo('template_url')."/slider/".$path.'/');
+																			//echo IMAGEPATH;
+                                      //chdir(IMAGEPATH);
                                       ?>
 																			<ul class="rslides">
 																				<?php
-																				foreach(glob('*') as $filename) {
-																					echo '<li><img src="http://localhost/Websites/eveshamMarina/wp-content/themes/evesham/slider/'.$path.'/'.basename($filename).'" /></li>';
+																				foreach($gallery as $filename) {
+																					//var_dump($filename);
+																					//echo '<br>=================================================================<br/>';
+																					echo '<li><img src="'.$filename['url'].'" /></li>';
 																				}
 																				?>
 																			</ul>
@@ -407,7 +450,7 @@ error_reporting(E_ALL);
 																	<div class="wpb_wrapper">
 																		<div class="wpb_text_column wpb_content_element">
 																			<div class="wpb_wrapper">
-																				<p><a class="btn btn-regular btn-custom right ctatop" href="<?php echo BASE_DIR; ?>contact.php" style="margin-top: 0px; margin-bottom: 0px; margin-right: 0px; background-color: #ffffff;">Contact Us</a></p>
+																				<p><a class="btn btn-regular btn-custom right ctatop" href="<?php echo bloginfo('url'); ?>/contact/" style="margin-top: 0px; margin-bottom: 0px; margin-right: 0px; background-color: #ffffff;">Contact Us</a></p>
 																			</div>
 																		</div>
 																	</div>

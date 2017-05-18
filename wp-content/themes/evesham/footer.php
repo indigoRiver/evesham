@@ -47,18 +47,6 @@
 									<li>
 										<a href="<?php echo bloginfo('url'); ?>/boat-count-figures/">Boat Count Figures</a>
 									</li>
-									<li>
-										<a href="#/">News Article #3</a>
-									</li>
-									<li>
-										<a href="#/">News Article #4</a>
-									</li>
-									<li>
-										<a href="#/">News Article #5</a>
-									</li>
-									<li>
-										<a href="#/">News Article #6</a>
-									</li>
 								</ul>
 							</div>
 						</aside>

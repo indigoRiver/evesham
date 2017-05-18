@@ -254,7 +254,13 @@ h6, p, ul, ol, dl, blockquote, pre {
 .none {
   display: none;
 }
-
+.header-img {
+	margin-bottom: 0px;
+  top: -30px;
+  position: relative;
+  left: 46px;
+  border: 1px solid #575656;
+}
 /*--------------------------------------------------------------
 2.0 Document Setup
 --------------------------------------------------------------*/
@@ -3680,7 +3686,7 @@ img.mfp-img {
 
 .slider-content-box .slider-content-box {
   padding: 15px 25px 25px;
- 
+
 }
 .slider-content-box .slider-content-box h2 {
   font-weight: bold;

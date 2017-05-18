@@ -106,3 +106,10 @@ a:hover{
 	font-family: Arial, Helvetica, Georgia, Sans-serif;
 	font-size: 12px;
 }
+.header-img {
+	margin-bottom: 0px;
+top: -30px;
+position: relative;
+left: 46px;
+border: 1px solid #575656;
+}

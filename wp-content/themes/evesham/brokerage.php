@@ -55,13 +55,13 @@ Template Name: Brokerage
 									foreach ($brokerage as $posts) {
 										$postID = $posts->ID;
 										?>
-										<a href="#" title="<?php echo get_field('boat_name', $postID); ?>"><img alt="" src=""><?php echo get_field('boat_name', $postID); ?></a>
-										<h4><a href=""></a></h4>
+										<a href="<?php echo get_the_permalink($postID); ?>" title="<?php echo get_field('boat_name', $postID); ?>"><?php echo get_the_post_thumbnail($postID); ?></a>
+										<h4><a href="<?php echo get_the_permalink($postID); ?>"><?php echo get_field('boat_name', $postID); ?></a></h4>
 										<div class="price">
 											Price: <?php echo get_field('price', $postID);?>
 										</div>
 										<p></p>
-										<p><input class="button" name="Submit" onclick="window.open('prods.php?id=<?php echo  $row['id']; ?>','_self');" style="float:right" type="submit" value="More"></p>
+										<p><input class="button" name="Submit" onclick="window.open('<?php echo get_the_permalink($postID); ?>','_self');" style="float:right" type="submit" value="More"></p>
 										<?php
 									}
 									?>
@@ -81,6 +81,4 @@ Template Name: Brokerage
 </div>
 </div>
 <div class="clear"></div>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

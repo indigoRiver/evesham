@@ -250,17 +250,17 @@ error_reporting(E_ALL);
 									<i class="fa fa-bars"></i>
 								</div>
 								<?php
-								$page = end((explode('/', $_SERVER['PHP_SELF'])));
+								$page = get_the_title();
 								?>
 								<ul class="wpc-menu">
-									<li <?php if($page == 'index.php') {echo 'class="current-menu-item current_page_item"';} ?>>
+									<li <?php if($page == 'Home') {echo 'class="current-menu-item current_page_item"';} ?>>
 										<a href="<?php echo bloginfo('url'); ?>/home/">Home</a>
 									</li>
-									<li <?php if($page == 'the-marina.php') {echo 'class="current-menu-item current_page_item"';} ?>>
+									<li <?php if($page == 'The Marina') {echo 'class="current-menu-item current_page_item"';} ?>>
 										<a href="<?php echo bloginfo('url'); ?>/the-marina/">The Marina</a>
 									</li>
 									<?php
-									$salesPages = array('boat-sales.php', 'new-boats.php', 'sailaways.php', 'brokerage.php', 'buying-a-boat.php', 'selling-a-boat.php', 'testimonials.php', 'faq.php', 'jargon-buster.php');
+									$salesPages = array('Boat Sales', 'New Boats', 'Sailaways', 'Brokerage', 'Buying a boat', 'Selling a boat', 'Testimonials', 'FAQ', 'Jargon Buster');
 									?>
 									<li  <?php if(in_array($page, $salesPages)) {echo 'class="current-menu-item current_page_item menu-item-has-children"';} ?> class="menu-item-has-children">
 										<a href="<?php echo bloginfo('url'); ?>/boat-sales/">Boat Sales</a>
@@ -291,16 +291,16 @@ error_reporting(E_ALL);
 											</li>
 										</ul>
 									</li>
-									<li <?php if($page == 'moorings.php') {echo 'class="current-menu-item current_page_item"';} ?>>
+									<li <?php if($page == 'Moorings') {echo 'class="current-menu-item current_page_item"';} ?>>
 										<a href="<?php echo bloginfo('url'); ?>/moorings/">Moorings</a>
 									</li>
-									<li <?php if($page == 'chandlery.php') {echo 'class="current-menu-item current_page_item"';} ?>>
+									<li <?php if($page == 'Chandlery') {echo 'class="current-menu-item current_page_item"';} ?>>
 										<a href="<?php echo bloginfo('url'); ?>/chandlery/">Chandlery</a>
 									</li>
-									<li <?php if($page == 'marina-services.php') {echo 'class="current-menu-item current_page_item"';} ?>>
+									<li <?php if($page == 'Marina Services') {echo 'class="current-menu-item current_page_item"';} ?>>
 										<a href="<?php echo bloginfo('url'); ?>/marina-services/">Marina Services</a>
 									</li>
-									<li <?php if($page == 'out-and-about.php') {echo 'class="current-menu-item current_page_item"';} ?>>
+									<li <?php if($page == 'Out and About') {echo 'class="current-menu-item current_page_item"';} ?>>
 										<a href="<?php echo bloginfo('url'); ?>/out-and-about/">Out And About</a>
 									</li>
 								</ul>

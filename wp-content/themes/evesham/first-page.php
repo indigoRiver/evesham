@@ -99,9 +99,9 @@ Template Name: Home 2
             <p><a href="<?php echo get_bloginfo('url'); ?>/boat-count-figures/" style="color: #777;">The Canal and River Trust’s annual national boat count shows that licence evasion on its waterways has reduced by 0.2% in the past year to 4.4%...</a></p><br>
           </li>
           <li style="margin: 0px; padding: 0px; height: 136px;">
-            <h2>Recent News #3</h2>
-            <h3>Article Date</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus efficitur lorem vehicula blandit. Praesent sed maximus ante. In commodo...</p><br>
+            <h2><a href="<?php echo get_bloginfo('url'); ?>/boat-launch-event/" style="color: #009fe3;">Boat Launch Event</a></h2>
+            <h3>19th May 2017</h3>
+            <p><a href="<?php echo get_bloginfo('url'); ?>/boat-launch-event/" style="color: #777;">Come and see our two amazing new narrow and wide beam show boats on display at the marina on Saturday 24th &amp; Sunday 25th June</a></p><br>
           </li>
         </ul>
       </div>

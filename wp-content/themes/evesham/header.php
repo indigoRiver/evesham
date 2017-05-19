@@ -69,7 +69,6 @@ error_reporting(E_ALL);
 	   .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
 	</style>
 	<style>
-
 	#two-column{
 		width: 550px;
 	}
@@ -264,7 +263,7 @@ error_reporting(E_ALL);
 														<div class="contact-box">
 															<div class="box-text left">
 																<div class="contact-text">
-																	<img class="header-img" src="<?php echo bloginfo('template_url'); ?>/uploads/IR4244_Evesham_Marina_website header for open weekend_C2A.JPG" /><span class="spacer"></span>
+																	<a href="boat-launch-event"><img class="header-img" src="<?php echo bloginfo('template_url'); ?>/uploads/IR4244_Evesham_Marina_website header for open weekend_C2A.JPG" /></a><span class="spacer"></span>
 																</div>
 															</div>
 														</div>

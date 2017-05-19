@@ -93,7 +93,18 @@
 							<h3 class="widget-title">Social</h3>
 							<div class="footer-connect">
 								<div class="footer-social">
-									<a href="https://twitter.com/hashtag/eveshammarina" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a> <a href="https://en-gb.facebook.com/EveshamMarina/" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a> <a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin-square"></i></a> <a href="https://plus.google.com/113316520837444560941/about" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+									<a href="https://plus.google.com/113316520837444560941/about" target="_blank" title="Google Plus">
+										<img src="<?php echo bloginfo('template_url'); ?>/img/google-plus.png" />
+									</a>
+									<a href="https://en-gb.facebook.com/EveshamMarina/" target="_blank" title="Facebook">
+										<img src="<?php echo bloginfo('template_url'); ?>/img/facebook.png" />
+									</a>
+									<a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+										<img src="<?php echo bloginfo('template_url'); ?>/img/linked-in.png" />
+									</a>
+									<a href="https://twitter.com/hashtag/eveshammarina" target="_blank" title="Twitter">
+										<img src="<?php echo bloginfo('template_url'); ?>/img/twitter.png" />
+									</a>
 								</div>
 							</div>
 						</aside>

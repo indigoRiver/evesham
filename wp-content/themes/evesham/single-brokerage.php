@@ -95,11 +95,11 @@
 	       .widget_recent_comments a, #secondary .widget.widget_nav_menu ul li a:hover, #secondary .widget.widget_nav_menu ul li.current-menu-item a,
 	       .iconbox-wrapper .iconbox-icon .primary, .iconbox-wrapper .iconbox-image .primary, .iconbox-wrapper a:hover, .breadcrumbs a:hover,
 	       .header-contact-wrapper li .box-icon i
-	       {color:#6FBA5F;}input[type="reset"], input[type="submit"], input[type="submit"], .header-right .header-contact-box .box-icon i,
+	       {color:#009fe3;}input[type="reset"], input[type="submit"], input[type="submit"], .header-right .header-contact-box .box-icon i,
 	       .wpc-menu ul li, .loop-pagination a:hover, .loop-pagination span:hover, .loop-pagination a.current, .loop-pagination span.current,
 	       .footer-connect .footer-social a:hover i, .entry-content .wpb_content_element .wpb_tour_tabs_wrapper .wpb_tabs_nav li.ui-tabs-active a, .entry-content .wpb_content_element .wpb_accordion_header li.ui-tabs-active a,
 	       .btn, .btn-primary, .custom-heading .heading-line, .custom-heading .heading-line.primary
-	       {background-color:#6FBA5F;}textarea:focus,
+	       {background-color:#009fe3;}textarea:focus,
 	       input[type="date"]:focus,
 	       input[type="datetime"]:focus,
 	       input[type="datetime-local"]:focus,
@@ -114,8 +114,8 @@
 	       input[type="url"]:focus,
 	       input[type="week"]:focus, .header-right .header-contact-box .box-icon,
 	       .wpc-menu > li:hover > a, .wpc-menu > li.current-menu-item > a, .wpc-menu > li.current-menu-ancestor > a,
-	       .entry-content blockquote{border-color:#6FBA5F;}#secondary .widget.widget_nav_menu ul li.current-menu-item a:before {border-left-color:#6FBA5F;}.secondary-color, #comments .comment .comment-wrapper .comment-meta .comment-time:hover, #comments .comment .comment-wrapper .comment-meta .comment-reply-link:hover, #comments .comment .comment-wrapper .comment-meta .comment-edit-link:hover,
-	       .iconbox-wrapper .iconbox-icon .secondary, .iconbox-wrapper .iconbox-image .secondary{color:#307520;}.btn-secondary, .custom-heading .heading-line.secondary{background-color:#6FBA5F;}.entry-meta .sticky-label,.inverted-column > .wpb_wrapper, .inverted-row{background-color:#f4f3ee;}.site{background-color:#ffffff;}.layout-boxed{background-color:#333333;background-repeat:repeat;background-size:inherit;background-attachment:inherit;background-position:left top;background-image:url('http://ac-accounts.co.uk/wp-content/uploads/2015/02/footer_lodyas.png');}body{font-family:Open Sans;font-weight:normal;color:#555555;font-size:14px;}h1,h2,h3,h4,h5,h6,.wpc-menu a{font-family:Source Sans Pro;}.header-right{margin-top:25px;margin-right:0;margin-bottom:0;margin-left:0;}.main-navigation{background-color:#26296B;}.main-navigation{border-top:3px solid #dddddd;}.nav-social a{color:#ffffff;}
+	       .entry-content blockquote{border-color:#009fe3;}#secondary .widget.widget_nav_menu ul li.current-menu-item a:before {border-left-color:#009fe3;}.secondary-color, #comments .comment .comment-wrapper .comment-meta .comment-time:hover, #comments .comment .comment-wrapper .comment-meta .comment-reply-link:hover, #comments .comment .comment-wrapper .comment-meta .comment-edit-link:hover,
+	       .iconbox-wrapper .iconbox-icon .secondary, .iconbox-wrapper .iconbox-image .secondary{color:#307520;}.btn-secondary, .custom-heading .heading-line.secondary{background-color:#009fe3;}.entry-meta .sticky-label,.inverted-column > .wpb_wrapper, .inverted-row{background-color:#f4f3ee;}.site{background-color:#ffffff;}.layout-boxed{background-color:#333333;background-repeat:repeat;background-size:inherit;background-attachment:inherit;background-position:left top;background-image:url('http://ac-accounts.co.uk/wp-content/uploads/2015/02/footer_lodyas.png');}body{font-family:Open Sans;font-weight:normal;color:#555555;font-size:14px;}h1,h2,h3,h4,h5,h6,.wpc-menu a{font-family:Source Sans Pro;}.header-right{margin-top:25px;margin-right:0;margin-bottom:0;margin-left:0;}.main-navigation{background-color:#26296B;}.main-navigation{border-top:3px solid #dddddd;}.nav-social a{color:#ffffff;}
 	   h1.heading-title {
 	   font-weight: 600;
 	   letter-spacing: -0.3px;

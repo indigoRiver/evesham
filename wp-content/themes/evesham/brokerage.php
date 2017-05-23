@@ -46,7 +46,8 @@ Template Name: Brokerage
 							<div class="grid-wrapper grid-4-columns grid-row carousel-wrapper-564dcdba569a2" id="boatz"></div>
 							<?php
 							$args = array(
-								'post_type' => 'brokerage'
+								'post_type' => 'brokerage',
+								'posts_per_page' => '-1'
 							);
 							$brokerage = get_posts($args);
 							?>

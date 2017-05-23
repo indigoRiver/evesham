@@ -351,10 +351,18 @@
 														<div class="custom-heading wpb_content_element" style="margin-top: -10px; margin-bottom: 20px;">
 															<h2 class="heading-title">Floor Plan</h2><span class="heading-line primary"></span>
 														</div>
-                            <?php
+														<?php
                             $floorplan = get_field('floor_plan', get_the_ID());
+														if($floorplan == false) {
+															?>
+															<div class="wpb_text_column wpb_content_element">Sorry, no floorplan availiable</div>
+															<?php
+														} else {
+															?>
+															<div class="wpb_text_column wpb_content_element"><img src="<?php echo $floorplan['url']; ?>" style="width: 100%; height: auto;"></div>
+															<?php
+														}
                             ?>
-														<div class="wpb_text_column wpb_content_element"><img src="<?php echo $floorplan['url']; ?>" style="width: 100%; height: auto;"></div>
 													</div>
 												</div>
 											</div>

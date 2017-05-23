@@ -124,5 +124,11 @@
 		</div>
 	</footer>
 </div>
+<script>
+/* IMAGE CENTER SCRIPT*/
+$(document).ready(function(){
+	$('.products a img').centerImage('inside');
+});
+</script>
 </body>
 </html>

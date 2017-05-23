@@ -123,6 +123,8 @@ error_reporting(E_ALL);
 	<script src="<?php echo bloginfo('template_url'); ?>/includes/js/revolution.min.js" type="text/javascript">
 	</script>
 	<script src="<?php echo bloginfo('template_url'); ?>/includes/js/modern.min.js" type="text/javascript">
+	</script>
+	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/icludes/js/imagecenter/js/jquery.blImageCenter.hs"></script>
 	</script> <!--[if lt IE 9]><script src="includes/js/html5.min.js"></script><![endif]-->
 	<link href="http://cms.pm/uploads/evesham189favicon.ico" rel="shortcut icon">
 	<style id="theme_option_custom_css" type="text/css">

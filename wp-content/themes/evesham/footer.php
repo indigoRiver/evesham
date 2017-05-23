@@ -47,6 +47,9 @@
 									<li>
 										<a href="<?php echo bloginfo('url'); ?>/boat-count-figures/">Boat Count Figures</a>
 									</li>
+									<li>
+										<a href="<?php echo bloginfo('url') ?>/boat-launch-event/">Boat Launch Event</a>
+									</li>
 								</ul>
 							</div>
 						</aside>

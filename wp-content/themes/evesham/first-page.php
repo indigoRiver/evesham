@@ -150,7 +150,8 @@ $(function(){
                   <div class="pad">
                     <?php
       							$args = array(
-      								'post_type' => 'brokerage'
+      								'post_type' => 'brokerage',
+                      'posts_per_page' => '4'
       							);
       							$brokerage = get_posts($args);
                     foreach ($brokerage as $posts) {
@@ -160,7 +161,7 @@ $(function(){
                       <?php echo get_the_post_thumbnail($postID); ?><b><a href="<?php echo get_the_permalink($postID); ?>"><?php echo get_field('boat_name', $postID); ?></a></b><br>
                       <?php
                       $body = get_field('broker_summary', $postID);
-                      echo substr($body, 0, strpos($body, ' ', 90)).'...'; ?><br>
+                      echo substr($body, 0, strpos($body, ' ', 80)).'...'; ?><br>
                       <a class="btn4" href="<?php echo get_field('boat_name', $postID); ?>" style="text-decoration:none; padding:5px;">more</a><br>
                       <br>
                     </div>

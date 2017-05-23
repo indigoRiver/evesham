@@ -50,11 +50,12 @@ Template Name: Brokerage
 							);
 							$brokerage = get_posts($args);
 							?>
-								<div class="products">
+
 									<?php
 									foreach ($brokerage as $posts) {
 										$postID = $posts->ID;
 										?>
+										<div class="products">
 										<a href="<?php echo get_the_permalink($postID); ?>" title="<?php echo get_field('boat_name', $postID); ?>"><?php echo get_the_post_thumbnail($postID); ?></a>
 										<h4><a href="<?php echo get_the_permalink($postID); ?>"><?php echo get_field('boat_name', $postID); ?></a></h4>
 										<div class="price">
@@ -62,10 +63,11 @@ Template Name: Brokerage
 										</div>
 										<p></p>
 										<p><input class="button" name="Submit" onclick="window.open('<?php echo get_the_permalink($postID); ?>','_self');" style="float:right" type="submit" value="More"></p>
+										</div>
 										<?php
 									}
 									?>
-							</div>
+
 						</div>
 					</div>
 				</div>

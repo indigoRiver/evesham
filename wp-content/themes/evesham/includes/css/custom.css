@@ -20,7 +20,7 @@
 }
 
 .row_inner_wrapper {
-	padding: 40px 0px;
+	/*padding: 40px 0px;*/
 	position: relative;
 }
 
@@ -45,11 +45,11 @@
 }
 
 .entry-content .wpb_row:first-child .row_inner_wrapper {
-	padding-top: 20px;
+	/*padding-top: 20px;*/
 }
 
 .entry-content .wpb_row:last-child .row_inner_wrapper {
-	padding-bottom: 20px;
+	/*padding-bottom: 20px;*/
 }
 
 .wpb_single_image img {

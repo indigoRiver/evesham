@@ -117,7 +117,7 @@
 			<div class="site-info clearfix">
 				<div class="footer-menu">
 					<div style="text-align:center; width:100%; clear:both;">
-						© 2016 Evesham Marina. All rights reserved.
+						© <?php echo date('Y'); ?> Evesham Marina. All rights reserved.
 					</div>
 				</div>
 			</div>

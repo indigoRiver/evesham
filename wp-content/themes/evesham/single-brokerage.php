@@ -178,7 +178,9 @@
 											 $gallery = get_field('image_gallery', get_the_ID());
 											 foreach ($gallery as $image) {
 												 ?>
-												 <img alt="Item Alt" src="<?php echo $image['url']; ?>">
+												 <div style="text-align: center;">
+												 	<img alt="Item Alt" src="<?php echo $image['url']; ?>">
+											 	</div>
 												 <?php
 											 }
 											 ?>

@@ -54,7 +54,14 @@
 	       removeTrailingZeros = removeTrailingZeros[0];
 	       $(this).text(removeTrailingZeros);
 	       console.log(removeTrailingZeros);
-	   })
+	   });
+			 $('#slides').slidesjs({
+				 pagination : {
+					 active: false
+				 },
+				 width: 940,
+				 height: 528
+		 });
 	})
 	</script>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -82,6 +89,7 @@
 	</script>
 	<script src="<?php echo bloginfo('template_url');?>/uploads/evesham189jquery.themepunch.revolution.min.js" type="text/javascript">
 	</script>
+	<script src="<?php echo bloginfo('template_url'); ?>/includes/js/slides/source/jquery.slides.min.js"></script>
 	<script src="<?php echo bloginfo('template_url');?>/uploads/evesham189modernizr.min.js" type="text/javascript">
 	</script><!--[if lt IE 9]><script src="http://cms.pm/uploads/evesham189html5.min.js"></script><![endif]-->
 	<link href="<?php echo bloginfo('template_url');?>/uploads/evesham189favicon.ico" rel="shortcut icon">
@@ -123,6 +131,12 @@
 	   font-family: Source Sans Pro;
 	   font-size: 26px;
 	}
+	#slides {
+		display: none;
+	}
+	.slidesjs-next {
+	  float: right;
+	}
 	</style>
 	<link href="http://cms.pm/uploads/eveshammarina.co.uk_--_73292118.css" rel="stylesheet">
 </head>
@@ -158,25 +172,32 @@
 						<h3 class="item_shippings" style="display:none">0.00</h3>
 						<h1 class="item_name"><?php echo get_the_title(); ?></h1>
 						<div class="prods">
-              <div class="thumb-align">
-							         <a href="#" rel="lightbox" style="position: relative; left: 9%;"><?php echo get_the_post_thumbnail(); ?></a>
+              <div class="thumb-align" id="slides">
+							         <?php echo get_the_post_thumbnail(); ?>
+											 <?php
+											 $gallery = get_field('image_gallery', get_the_ID());
+											 foreach ($gallery as $image) {
+												 ?>
+												 <img alt="Item Alt" src="<?php echo $image['url']; ?>">
+												 <?php
+											 }
+											 ?>
               </div>
-              <div id="clearer"></div>
-              <?php
-              $gallery = get_field('image_gallery', get_the_ID());
-              foreach ($gallery as $image) {
-                ?>
-                  <a href="<?php echo $image['url']; ?>" rel="lightbox"><img alt="Item Alt" src="<?php echo $image['url']; ?>" style="padding:0px; margin:0px; margin-bottom:5px;" width="50"></a>
-                <?php
-              }
-              /*
-              while($row = $result->fetch_assoc()) {
-                ?>
-                  <a href="uploads/<?php echo $row['image']; ?>" rel="lightbox"><img alt="Item Alt" src="uploads/<?php echo $row['image']; ?>" style="padding:0px; margin:0px; margin-bottom:5px;" width="50"></a>
-                <?php
-              }*/
-              ?>
-
+          	<div id="clearer"></div>
+	          <?php
+	          $gallery = get_field('image_gallery', get_the_ID());
+	          foreach ($gallery as $image) {
+	            ?>
+	            <a href="<?php echo $image['url']; ?>" rel="lightbox"><img alt="Item Alt" src="<?php echo $image['url']; ?>" style="padding:0px; margin:0px; margin-bottom:5px;" width="50"></a>
+	          	<?php
+	          }
+	          /*
+	          while($row = $result->fetch_assoc()) {
+	             ?>
+	          	<a href="uploads/<?php echo $row['image']; ?>" rel="lightbox"><img alt="Item Alt" src="uploads/<?php echo $row['image']; ?>" style="padding:0px; margin:0px; margin-bottom:5px;" width="50"></a>
+	          	<?php
+	          }*/
+	          ?>
 						</div>
 						<div id="prod_description">
 							<input class="item_size" name="" type="hidden" value="100619">
